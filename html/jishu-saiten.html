@@ -1,0 +1,74 @@
+<html lang="ja">
+
+<head>
+  <title>Bridge</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link css -->
+  <link rel="stylesheet" href="../dist/css/style.min.css" type="text/css">
+  <!-- Link js -->
+  <script defer src="../dist/js/main.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <header class="br-header--main">
+    <h1 class="br-header--main__logo">
+      <a href="#">
+        <img src="../dist/images/image-logo--header.png" alt="">
+      </a>
+    </h1>
+    <button type="button" class="br-header--main__button" id="toggleMobileMenu">
+      <img src="../dist/images/image-menu--open.png" alt="">
+    </button>
+    <div class="br-header--main__content">
+      <ul>
+        <li><a href="#" class="br-button">自習報告</a></li>
+        <li><a href="#" class="br-button">獲得称号</a></li>
+        <li><a href="#" class="br-button">マイプロフィール</a></li>
+        <li><a href="#" class="br-button">学習工程確認</a></li>
+        <li><a href="#" class="br-button">自習問題</a></li>
+        <li><a href="#" class="br-button">学習資料</a></li>
+      </ul>
+    </div>
+  </header>
+  <section class="br-jishuhoukoku--saiten">
+    <div class="container">
+      <div class="br-jishuhoukoku--saiten__content br-border--content">
+        <h4 class="br-content--title">自習問題</h4>
+        <div class="br-jishuhoukoku--saiten__scores">
+          <span class="d-block text-center">不合格</span>
+          <h4>55 / 100</h4>
+          <p>もう一度勉強してテストしましょう</p>
+        </div>
+        <form action="">
+          <div class="form-group">
+            <label for="">Q1.これ <span>X</span></label>
+            <div class="custom-select">
+              <select name="" id="">
+                <option value="1">ベトナム語の回答</option>
+                <option value="2">ベトナム語の回答</option>
+              </select>
+            </div>
+            <p>答え：<span>ベトナム語の答え</span></p>
+          </div>
+          <div class="comment-content">
+            <h4>解説</h4>
+            <p>ベトナム語の解説が入ります。ベトナム語の解説が入ります。ベトナム語の解説が入ります。</p>
+          </div>
+          <div class="form-group">
+            <label for="">Q2.これ <span>○</span></label>
+            <div class="custom-select">
+              <select name="" id="">
+                <option value="1">ベトナム語の回答</option>
+                <option value="2">ベトナム語の回答</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+// Loading
+.br-loading {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+}
+
+// Header
+.br-header--main {
+  position: relative;
+  padding: 25.5px 0;
+  background-color: $color-black-primary;
+  text-align: center;
+  -webkit-box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.22);
+  -moz-box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.22);
+  box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.22);
+  margin-bottom: 34px;
+  &__button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    @include translate(0, -50%);
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    img {
+      @include transition;
+    }
+    &.show {
+      img {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &__content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: $color-black-primary;
+    padding: 46px 52px;
+    overflow-y: auto;
+    display: none;
+    z-index: 999;
+    &.show {
+      display: block;
+    }
+    li {
+      margin-bottom: 21px;
+      &:first-of-type {
+        margin-bottom: 70px;
+      }
+      &:nth-of-type(4) {
+        margin-bottom: 70px;
+      }
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Dashboard
+.br-dashboard {
+  padding-bottom: 50px;
+  &--content {
+    margin-bottom: 34px;
+    p {
+      @include font(15px, 700, 21px);
+      margin-bottom: 4px;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+    .points {
+      @include font(53px, 700, 76px);
+      margin-bottom: 17px;
+      span {
+        @include font(12px, 700, 17px);
+      }
+    }
+    li {
+      margin-bottom: 20px;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Myprofile
+.br-myprofile {
+  &--content {
+    padding-bottom: 120px;
+    .br-content--title {
+      margin-bottom: 28px;
+    }
+    ul {
+      padding: 0 15px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 9px;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+    p {
+      &:first-of-type {
+        max-width: 90px;
+        width: 100%;
+        flex-shrink: 0;
+        margin-right: 41px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+// jishuhoukoku
+.br-jishuhoukoku {
+  .br-content--title {
+    margin-bottom: 28px;
+  }
+  .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    &:last-of-type {
+      margin-bottom: 23px;
+    }
+  }
+  button {
+    // margin-top: 23px;
+  }
+  input, .custom-select, select {
+    max-width: 110px;
+    width: 100%;
+    flex-shrink: 0;
+    @include font(15px, 700, 21px);
+  }
+  &--test {
+    padding: 0 0 50px;
+    .br-content--title {
+      margin: 0 0 21px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 26.5px;
+      &:last-of-type {
+        margin: 38.5px 0 0;
+      }
+      label {
+        margin: 0 0 10px;
+      }
+    }
+    select {
+      width: 100%;
+      outline: none;
+    }
+  }
+  &--saiten {
+    padding: 0 0 50px;
+    .br-content--title {
+      margin: 0 0 19px;
+    }
+    &__scores {
+      background-color: $color-black-primary;
+      border-radius: 6px;
+      color: $color-white-primary;
+      text-align: center;
+      padding: 17px 15px;
+      margin: 0 0 60px;
+      -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.16);
+      -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.16);
+      box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.16);
+      span {
+        margin: 0 0 3px;
+      }
+      h4 {
+        @include font(56px, 700, 81px);
+        margin: 0 0 17px;
+      }
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      label {
+        margin: 0 0 9px;
+      }
+      span {
+        color: #FF0000;
+      }
+      select {
+        width: 100%;
+        margin: 0 0 10px;
+      }
+    }
+    .comment-content {
+      border: 1px solid #FF0000;
+      padding: 12px 20px 20px 12px;
+      margin: 19px 0 29px;
+      * {
+        color: #FF0000;
+      }
+      h4 {
+        margin: 0 0 17px;
+        @include font(15px, 700, 21px);
+      }
+      p {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+// Jishumondai
+.br-Jishumondai, .br-gakushukoutei {
+  padding: 0 0 50px;
+  .br-content--title {
+    margin-bottom: 25px;
+  }
+}
+
+// badge 
+.br-badge {
+  padding-bottom: 50px;
+  .br-content--title {
+    margin-bottom: 9px;
+  }
+  &--description {
+    margin-bottom: 19px;
+  }
+}
+
+.br-gakushukoutei {
+  &--content {
+    &__description {
+      font-weight: 400;
+      margin: 0 0 20px;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+    .br-button {
+      margin: 34px 0 0;
+      &:last-of-type {
+        margin-top: 13px;
+      }
+    }
+  }
+}
+

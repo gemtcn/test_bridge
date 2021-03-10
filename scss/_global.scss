@@ -1,0 +1,197 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;700&display=swap");
+
+// Body
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  @include font(15px, 700, 21px);
+  color: $color-black-primary;
+  background-color: $color-white-primary;
+  overflow-x: hidden;
+  min-height: 100vh;
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+// Custon container
+.container {
+  padding: 0 30px;
+}
+
+// Custom button
+.br-button {
+  color: $color-black-primary;
+  @include font(19px, 700, 27px);
+  padding: 16px 0;
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  background-color: $color-white-primary;
+  border: 1px solid $color-black-primary;
+  text-align: center;
+  @include transition;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.16);
+  &:hover,
+  &.active {
+    background-color: $color-black-primary;
+    color: $color-white-primary;
+  }
+  &.bg-black {
+    color: $color-white-primary;
+    background-color: $color-black-primary;
+  }
+  &.bg-green--primary {
+    color: $color-white-primary;
+    background-color: #5d8308;
+    border-color: #5d8308;
+  }
+  &.bg-yellow {
+    color: $color-white-primary;
+    background-color: #c9a200;
+    border-color: #c9a200;
+  }
+  &.bg-grey {
+    color: $color-white-primary;
+    background-color: #505050;
+    border-color: #505050;
+  }
+  &.bg-blue {
+    color: $color-white-primary;
+    background-color: #1446ef;
+    border-color: #1446ef;
+  }
+  &.bg-green--secondary {
+    color: $color-white-primary;
+    background-color: #3aa335;
+    border-color: #3aa335;
+  }
+  &.disable {
+    background-color: #e8e8e8;
+    color: #434343;
+  }
+}
+
+// Content has border
+.br-border--content {
+  border: 1px solid $color-black-primary;
+  padding: 25px 20px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.16);
+}
+
+// Banner
+.br-banner {
+  border: 1px solid $color-black-primary;
+  padding: 10px 10px 0 10px;
+  p {
+    @include font(15px, 700, 21px);
+    margin-bottom: 3px;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  .sale-point {
+    @include font(43px, 700, 62px);
+    span {
+      @include font(39px, 700, 56px);
+      display: inline-block;
+      margin-left: 4px;
+    }
+  }
+}
+
+// Tittle
+.br-content--title {
+  @include font(29px, 700, 42px);
+  text-align: center;
+}
+
+.br-back {
+  padding: 0 22px;
+  margin-top: 30px;
+}
+
+// input
+input {
+  border: 0;
+  outline: none;
+  @include font(15px, 700, 21px);
+  color: $color-black-primary;
+}
+
+// Custom select
+.custom-select {
+  position: relative;
+  select {
+    padding-left: 25px;
+    border: 0;
+    border-bottom: 2px solid $color-black-primary;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  &:after {
+    position: absolute;
+    width: 7px;
+    height: 6px;
+    top: 9px;
+    left: 9px;
+    z-index: 99;
+    content: "";
+    background-image: url("../dist/images/icon-select--down.png");
+  }
+}
+
+// List
+.br-list {
+  li {
+    margin-bottom: 17px;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
+
+// Select
+select {
+  outline: none;
+  @include font(15px, 700, 21px);
+}
+
+// Tooltip
+.has-tooltip {
+  position: relative;
+  a[data-tooltip='hasTooltip'] {
+    &:focus ~ .br-tooltip{
+      display: block;
+    }
+  }
+  .br-tooltip {
+    position: absolute;
+    padding: 12px;
+    border: 1px solid $color-black-primary;
+    border-radius: 5.5px;
+    background-color: $color-white-primary;
+    top: calc(100% + 5px);
+    z-index: 100;
+    display: none;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      @include translate(-50%, 0);
+      width: 15px;
+      height: 15px;
+      background: #ffffff;
+      border-left: 1px solid $color-black-primary;
+      border-bottom: 1px solid $color-black-primary;
+      transform: rotate(135deg);
+    }
+  }
+}
