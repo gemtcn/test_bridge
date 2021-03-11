@@ -13,7 +13,16 @@ $('#toggleMobileMenu').on('click', function () {
   }
 })
 
-// $("a[data-tooltip='hasTooltip']").on('click', function (e) {
-//   e.preventDefault();
-//   $(this).next('.br-tooltip').toggleClass('show');
-// })
+$("a[data-tooltip='hasTooltip']").on('click', function (e) {
+  e.preventDefault();
+  $(this).next('.br-tooltip').toggleClass('show');
+})
+
+
+// Detect ios
+const isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+if (isSafari && iOS) {
+  $('body').addClass('ios-content');
+}

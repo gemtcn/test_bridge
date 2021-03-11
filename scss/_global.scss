@@ -12,6 +12,9 @@ body {
   &.no-scroll {
     overflow: hidden;
   }
+  &.ios-content {
+    padding-bottom: 50px;
+  }
 }
 
 // Custon container
@@ -165,11 +168,6 @@ select {
 // Tooltip
 .has-tooltip {
   position: relative;
-  a[data-tooltip='hasTooltip'] {
-    &:focus ~ .br-tooltip{
-      display: block;
-    }
-  }
   .br-tooltip {
     position: absolute;
     padding: 12px;
@@ -179,11 +177,14 @@ select {
     top: calc(100% + 5px);
     z-index: 100;
     display: none;
+    &.show {
+      display: block;
+    }
     &:before {
       content: "";
       display: block;
       position: absolute;
-      top: -9px;
+      top: -8px;
       left: 50%;
       @include translate(-50%, 0);
       width: 15px;
